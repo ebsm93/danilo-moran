@@ -1,0 +1,13 @@
+html, body {
+
+}
+
+body {
+    color: rgb(207, 160, 4);
+    background-color: rgb(3, 3, 68);
+}
+
+.header {
+    text-align: center;
+    font-size: 1.4em;
+}
