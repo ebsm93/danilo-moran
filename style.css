@@ -87,6 +87,13 @@ img:hover {
     letter-spacing: 1px;
 }
 
+.name {
+    font-size: 1.9em;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    /* font-weight: 700; */
+}
+
 .intro-text {
     display: flex;
     flex-direction: column;
@@ -169,7 +176,7 @@ img:hover {
 }
 
 .slide-left-center-2 {
-    animation: slide-left 1.6s forwards;
+    animation: slide-left 1.9s forwards;
 }
 
 .slide-left-center-3 {
