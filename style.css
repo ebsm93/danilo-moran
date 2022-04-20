@@ -1,13 +1,338 @@
-html, body {
+:root {
+    --root-font-size: 18px;
+    --root-font-weight: 700;
+    --root-font-color: rgb(204, 140, 20);
+    --root-font-shadow: 1px 1px 1px black;
+    --a-color: aqua;
+    --standard-border-radius: 10px;
 
+    --main-thematic-bg-color: rgb(2, 0, 36, 0.7);
+    --main-thematic-bg-color-transparent: rgb(2, 0, 36, 0);
+    --contact-card-bg-color:  rgba(2, 1, 19, 0.7);
+    --title-font-size: 2.1em;
+    --title-font-color: rgb(204, 140, 20);
+    --title-border: 2px solid white;
+    --img-shadow: 5px 5px 5px rgb(0, 0, 0);
+}
+
+html,
+body {
+    height: 100%;
+    overflow-x: hidden;
 }
 
 body {
-    color: rgb(207, 160, 4);
-    background-color: rgb(3, 3, 68);
+    color: var(--root-font-color);
+    text-shadow: var(--root-font-shadow);
+    background-image: url(./images/jesse-orrico-L94dWXNKwrY-unsplash.jpg);
+    
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;   
 }
 
-.header {
+.page-wrap {
+    padding: 5px;
+    display: grid;
+    justify-content: center;
+    animation: content-trans 2s forwards;
+}
+
+a {
+    animation: link-trans 3.5s forwards;
+}
+
+img {
+    width: 60vw;
+    height: auto;
+    border: 2px solid white;
+    border-radius: var(--standard-border-radius);
+    box-shadow: var(--img-shadow);
+}
+
+img:hover {
+    box-shadow: 3px 3px 3px  white;
+    cursor: pointer;
+}
+
+.title {
+    font-size: var(--title-font-size);
+    color: var(--title-font-color);
+    background-color: var(--main-thematic-bg-color);
     text-align: center;
-    font-size: 1.4em;
+    padding: 4px;
+    width: 100%;
+    margin: 2vh;
+    border-radius: var(--standard-border-radius);
+    justify-self: center;
+    
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    
+    
+    animation: title-grow 3.5s forwards
+}
+
+ .header {
+    margin-bottom: 3vh;
+    padding: 1.5vw;
+    animation: head-bg-trans 2s forwards;
+    text-align: center;
+    width: 90vw;
+    border-radius: 20px;
+    justify-self: center;
+    border: 1px solid white;
+    letter-spacing: 1px;
+}
+
+.intro-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact {
+    font-size: 1.1em;
+    border: 1px solid white;
+    border-radius: var(--standard-border-radius);
+    background-color: var(--contact-card-bg-color);
+    padding: 2vh;
+    align-self: center;
+    width: fit-content;
+    text-align: start;
+
+}
+
+.feed {
+    margin-top: 4vh;
+    display: grid;
+}
+
+.feed-title {
+    font-size: 1.6em;
+    text-align: center;
+    width: 90%;
+    background-color: var(--main-thematic-bg-color);
+    border-radius: 5px;
+
+    align-self: center;
+    justify-self: center;
+}
+
+.feed>ul {
+    display: grid;
+    justify-items: center;
+    /* align-content: center;   */
+    gap: 7vh;
+}
+
+.feed-item-desc {
+    animation: head-bg-trans 2s forwards;
+    /* height: 5vh; */
+    padding: 1vh;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    width: fit-content;
+    border-radius: 5px;
+    font-weight: 700;
+    border: 1px solid white;
+    margin: 2vh;
+}
+
+.feed-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    padding-top: 25px;
+    width: 85vw;
+}
+
+.no-bullets {
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 2vh;
+}
+
+.licenses {
+    margin-top: 0;
+}
+
+.slide-left-center {
+    animation: slide-left 1.3s forwards;
+}
+
+.slide-left-center-2 {
+    animation: slide-left 1.6s forwards;
+}
+
+.slide-left-center-3 {
+    animation: slide-left 1.9s forwards;
+    font-size: 1.2em;
+}
+
+
+.footer {
+    text-align: center;
+    /* width: 100%; */
+    /* justify-items: center; */
+    width: fit-content;
+    justify-self: center;
+    border-radius: 10px;
+    margin: 1vh;
+    display: grid;
+    gap: 2vh;
+}
+
+.second-contact {
+    font-size: 1.3em;
+}
+
+#lilChris {
+    width: 30vw;
+    height: auto;
+    justify-self: center;
+}
+
+.clicked-image {
+    -webkit-transform:scale(1.5);
+    transform:scale(1.5);
+}
+
+@keyframes link-trans {
+
+    from {
+        color: black;
+    }
+
+    40% {
+        color: rgb(37, 146, 146);
+    }
+    
+    70% {
+        color: rgb(235, 227, 227);
+    }
+    
+    to {
+        color: var(--a-color);
+    }
+    
+}
+
+@keyframes content-trans {
+    from {
+        opacity: 0%;
+    }
+
+    20% {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+@keyframes title-grow {
+    
+    from {
+        text-decoration: none;
+        border: 2px solid black;
+    }
+    
+    50% {
+        border: 2px solid black;
+        /* text-decoration: underline;
+        text-decoration-thickness: 1px ; */
+    }
+
+    80% {
+        /* border: 2px solid white; */
+    }
+    
+    to {
+        text-decoration: underline;
+        text-decoration-thickness: 1px ;
+        border: var(--title-border);
+    }
+     
+ }
+
+@keyframes head-bg-trans {
+    from {
+        background-color: var(--main-thematic-bg-color-transparent);
+    }
+
+    50% {
+        background-color: var(--main-thematic-bg-color-transparent);
+    }
+
+    to {
+        background-color: var(--main-thematic-bg-color);
+    }
+}
+
+@keyframes slide-left {
+    from {
+        transform: translateX(-100%);
+    }
+
+    50% {
+        /* transform: translateY(-350%);    */
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@media (min-width: 500px) {
+
+    body {
+        font-size: calc(20px + 0.3vw);
+    }
+
+    .title {
+        font-size: calc(var(--title-font-size) + 0.4vw); 
+        padding: 1.5vw;
+        padding-top: 1vw;
+    }
+
+    .header {
+        width: 50vw;
+    }
+
+    img {
+        width: 30vw
+    }
+
+    .feed-title {
+        /* font-size: 1.3em; */
+        width: 65%;
+        padding: 0.7vw;
+    }
+
+    .feed-item {
+        width: 60vw;
+    }
+
+    .no-bullets {
+        gap: 4vh;
+    }
+
+    .contact {
+        /* display: grid; */
+
+    }
+
+    #lilChris {
+        width: 10vw;
+    }
+
 }
