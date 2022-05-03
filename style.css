@@ -24,12 +24,12 @@ body {
 body {
     color: var(--root-font-color);
     text-shadow: var(--root-font-shadow);
+    margin: 0;   
+
     background-image: url(./images/jesse-orrico-L94dWXNKwrY-unsplash.jpg);
-    
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    margin: 0;   
 }
 
 .page-wrap {
